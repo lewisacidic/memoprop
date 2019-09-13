@@ -1,0 +1,4 @@
+[run]
+omit = 
+    versioneer.py
+    src/memoized_property/_version.py
