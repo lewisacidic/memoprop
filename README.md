@@ -10,7 +10,7 @@ pip install memoized_property
 ```
 
 
-## Starting up
+## Developing
 
 Create the conda environment:
 
@@ -20,16 +20,11 @@ conda activate memoized-property-dev
 ```
 
 
-## Format code
-
 Format code by running the pre-commit tasks:
 
 ```shell
 pre-commit run --all
 ```
-
-
-## Run tests
 
 Run the tests with pytest:
 
