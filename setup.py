@@ -36,7 +36,7 @@ lint_requirements = [
     "pep8-naming",
 ]
 
-test_requirements = ["pytest", "pytest-cov", "importlib_metadata; python_version<'3.8'"]
+test_requirements = ["pytest", "pytest-mock", "pytest-cov"]
 
 dev_requirements = (
     ["ipython", "black", "rope", "pre-commit"] + lint_requirements + test_requirements

@@ -15,6 +15,7 @@ dependencies:
   - python>=3
   - pytest
   - pytest-cov
+  - pytest-mock
   - rope
   - twine
   - pip:
