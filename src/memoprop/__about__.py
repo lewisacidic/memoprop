@@ -3,7 +3,7 @@
 #
 # Copyright (c) 2019 Rich Lewis
 # License: MIT license
-"""Metadata for memoized-property."""
+"""Metadata for memoprop."""
 # guard import
 # in setup.py we use run this with runpy so the import will fail
 try:
@@ -14,20 +14,20 @@ try:
 except ImportError:
     __version__ = None
 
-__distname__ = "memoized-property"
-__name__ = "memoized_property"
-__description__ = "Define properties which cache the result of their getter."
+__distname__ = "memoprop"
+__name__ = "memoprop"
+__description__ = "Basic memoized properties for Python."
 __license__ = "MIT license"
 __copyright__ = "Copyright (c) 2019 Rich Lewis"
 
 __author__ = "Rich Lewis"
 __author_email__ = "opensource@richlew.is"
 
-__url__ = "https://lewisacidic.github.io/memoized-property"
-__docs_url__ = "https://lewisacidic.github.io/memoized-property/docs"
-__source_url__ = "https://github.com/lewisacidic/memoized-property"
-__bugtracker_url__ = "https://github.com/lewisacidic/memoized-property/issues"
-__download_url__ = "https://github.com/lewisacidic/memoized-property/releases"
+__url__ = "https://lewisacidic.github.io/memoprop"
+__docs_url__ = "https://lewisacidic.github.io/memoprop/docs"
+__source_url__ = "https://github.com/lewisacidic/memoprop"
+__bugtracker_url__ = "https://github.com/lewisacidic/memoprop/issues"
+__download_url__ = "https://github.com/lewisacidic/memoprop/releases"
 
 __classifiers__ = [
     "Development Status :: 2 - Pre-Alpha",

@@ -1,4 +1,4 @@
-name: memoized-property-dev
+name: memoprop-dev
 channels:
   - defaults
   - conda-forge

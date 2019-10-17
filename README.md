@@ -1,12 +1,11 @@
-# memoized-property
+# memoprop
 
-Define properties which cache the result of their getter.
-
+Basic memoized properties (properties which cache the result of their getter) for *Python*.
 
 ## Quickstart/Installation
 
 ```shell
-pip install memoized_property
+pip install memoprop
 ```
 
 
@@ -16,7 +15,7 @@ Create the conda environment:
 
 ```shell
 conda env create -f envs/dev.yml
-conda activate memoized-property-dev
+conda activate memoprop-dev
 ```
 
 

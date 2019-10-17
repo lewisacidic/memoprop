@@ -7,7 +7,7 @@
 from contextlib import ExitStack as does_not_raise  # noqa: N813
 
 import pytest
-from memoized_property import memoized_property
+from memoprop import memoized_property
 
 
 @pytest.fixture

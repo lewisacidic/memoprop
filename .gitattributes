@@ -1,1 +1,1 @@
-src/memoized_property/_version.py export-subst
+src/memoprop/_version.py export-subst

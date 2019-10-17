@@ -1,11 +1,11 @@
 ---
 name: Feature request
-about: Suggest an idea for memoized-property
+about: Suggest an idea for memoprop
 title: 'Feature Request:'
 ---
 
 - [ ] I have checked the [Issue tracker](../issues) and as far as I can tell, this is not a duplicate issue
-- [ ] I am using the latest version of memoized-property
+- [ ] I am using the latest version of memoprop
 
 
 **Is your feature request related to a problem?  Please describe.**

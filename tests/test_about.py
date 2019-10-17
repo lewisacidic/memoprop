@@ -17,18 +17,18 @@ BASEDIR = pathlib.Path(__file__).parents[1]
 @pytest.fixture
 def base_pkg():
     """Provide a reloaded base package as a fixture."""
-    base_pkg = importlib.import_module("memoized_property")
+    base_pkg = importlib.import_module("memoprop")
     return importlib.reload(base_pkg)
 
 
 @pytest.mark.parametrize(
     ["field", "value"],
     [
-        ("distname", "memoized-property"),
-        ("name", "memoized_property"),
+        ("distname", "memoprop"),
+        ("name", "memoprop"),
         ("copyright", "Copyright (c) 2019 Rich Lewis"),
         ("license", "MIT license"),
-        ("url", "https://lewisacidic.github.io/memoized-property"),
+        ("url", "https://lewisacidic.github.io/memoprop"),
     ],
 )
 def test_metadata(base_pkg, field, value):
@@ -48,6 +48,6 @@ def test_version(base_pkg):
 def test_import_fails():
     """Test behavior if import fails."""
     # if we run __about__ as a script with runpy, imports fail as planned in setup.py
-    about_path = str(BASEDIR.joinpath("src", "memoized_property", "__about__.py"))
+    about_path = str(BASEDIR.joinpath("src", "memoprop", "__about__.py"))
     about = runpy.run_path(about_path)
     assert about["__version__"] is None

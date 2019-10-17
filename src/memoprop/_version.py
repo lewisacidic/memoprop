@@ -38,8 +38,8 @@ def get_config():
     cfg.VCS = "git"
     cfg.style = "pep440"
     cfg.tag_prefix = ""
-    cfg.parentdir_prefix = "memoized-property-"
-    cfg.versionfile_source = "src/memoized_property/_version.py"
+    cfg.parentdir_prefix = "memoprop-"
+    cfg.versionfile_source = "src/memoprop/_version.py"
     cfg.verbose = False
     return cfg
 

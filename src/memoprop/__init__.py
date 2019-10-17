@@ -5,7 +5,7 @@
 # License: MIT license
 """Define properties which cache the result of their getter.
 
-See `memoized_property.__about__` for more info.
+See `memoprop.__about__` for more info.
 """
 from .__about__ import __copyright__
 from .__about__ import __distname__

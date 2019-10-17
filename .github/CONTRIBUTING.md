@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for your interest in memoized-property!
+Thank you for your interest in memoprop!
 All contributions, bug reports, bug fixes, documentation improvements, enhancements and ideas are welcome - head over to the [Issue Tracker](../issues) to get started!
 
 Please note that we have a [code of conduct](#code-of-conduct); please follow it in all your interactions with the project.
@@ -23,12 +23,12 @@ If the snippet is longer than 50 lines, you can create a [gist](https://gist.git
 
 Please **include a link any external data used** or if this is sensitive, produce dummy data that reproduces the bug.
 
-Finally, include **operating system type and version**, **Python version**, **memoized-property version**, and the **installation procedure** you used.
+Finally, include **operating system type and version**, **Python version**, **memoprop version**, and the **installation procedure** you used.
 
 
 ## Contributing code
 
-When contributing to memoized-property, please first discuss the change you wish to make via the [Issue Tracker](../issues) before writing any substantial code.
+When contributing to memoprop, please first discuss the change you wish to make via the [Issue Tracker](../issues) before writing any substantial code.
 This will make sure we are on the same page, allows all features to be tracked consistently, and avoid any wasted time and/or disappointment if your contribution does not end up merged. 
 *We aim to have at least one issue for every pull request.*
 
@@ -46,8 +46,8 @@ First, **fork the code** using the `Fork` button on [the source page](..).
 Then, **clone the code** with `git`, and change into the source directory (if you haven't used `git` before, a good place to start is [GitHub's help pages](https://help.github.com/en)).
 
 ```shell
-git clone https://github.com/<your username>/memoized-property
-cd memoized-property
+git clone https://github.com/<your username>/memoprop
+cd memoprop
 ```
 
 Next, **check out a feature branch**:
@@ -56,7 +56,7 @@ Next, **check out a feature branch**:
 git checkout -b feature/<name of feature>
 ```
 
-memoized-property uses [`conda`](https://conda.io/) to maintain a consistent development environment.
+memoprop uses [`conda`](https://conda.io/) to maintain a consistent development environment.
 If you have not yet done so, please **install `conda`**; this is easiest done using the [miniconda installer](https://docs.conda.io/en/latest/miniconda.html):
 
 ```shell
@@ -75,7 +75,7 @@ conda env create -f envs/dev.yml
 Once this is set up, **activate the environment**:
 
 ```shell
-conda activate memoized-property-dev
+conda activate memoprop-dev
 ```
 
 You should now be good to go. Check this by **running the tests**:

@@ -3,7 +3,7 @@
 #
 # Copyright (c) 2019 Rich Lewis
 # License: MIT license
-"""Set up memoized-property."""
+"""Set up memoprop."""
 import runpy
 
 from setuptools import find_packages
@@ -12,7 +12,7 @@ from setuptools import setup
 import versioneer
 
 
-about = runpy.run_path("src/memoized_property/__about__.py")
+about = runpy.run_path("src/memoprop/__about__.py")
 
 
 def read_readme():
