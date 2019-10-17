@@ -8,21 +8,16 @@ source:
   path: ../
 
 build:
-  noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
+  host:
     - python
     - pip
-    - setuptools
-    - wheel
-    - setuptools_scm
 
   run:
     - python
-    - importlib_metadata
   
   test:
     - pytest
