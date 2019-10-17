@@ -8,7 +8,7 @@ from functools import partial
 from functools import wraps
 
 
-def memoized_property(func=None, settable=False, deletable=True):
+def memoized_property(func=None, settable=False, deletable=True, classlevel=False):
     """Return the property attribute that only calls its getter on the first access.
 
     The result is cached as a private attribue of the same name as the property, and
@@ -22,6 +22,7 @@ def memoized_property(func=None, settable=False, deletable=True):
         func: the getter function to be decorated.
         settable: whether to create a setter.
         deletable: whether to create a deleter.
+        classlevel: whether to memoize at class level i.e. all instances share value.
 
     Examples:
         Use a decorator:
@@ -75,18 +76,55 @@ def memoized_property(func=None, settable=False, deletable=True):
             ...
         AttributeError: can't delete attribute
 
+        The memoization can be done at the class level
+        >>> class DeepThought(object):
+        ...     @memoized_property(classlevel=True)
+        ...     def answer(self):
+        ...         print("Running expensive getter...")
+        ...         return 42
+
+        >>> dt1, dt2 = DeepThought(), DeepThought()
+        >>> dt1.answer
+        Running expensive getter...
+        42
+
+        >>> dt2.answer
+        42
+
+        Of course, that means the property is only settable at class level:
+        >>> class DeepThought(object):
+        ...     @memoized_property(classlevel=True, settable=True)
+        ...     def answer(self):
+        ...         print("Running expensive getter...")
+        ...         return 42
+
+        >>> dt1, dt2 = DeepThought(), DeepThought()
+        >>> dt1.answer = -1
+        >>> dt1.answer
+        -1
+
+        >>> dt2.answer
+        -1
+
     """
 
     if func is None:
-        return partial(memoized_property, settable=settable, deletable=deletable)
+        return partial(
+            memoized_property,
+            settable=settable,
+            deletable=deletable,
+            classlevel=classlevel,
+        )
 
     attr_name = "_" + func.__name__
 
+    lookup = type if classlevel else lambda x: x
+
     def fset(self, value):
-        setattr(self, attr_name, value)
+        setattr(lookup(self), attr_name, value)
 
     def fdel(self):
-        delattr(self, attr_name)
+        delattr(lookup(self), attr_name)
 
     @wraps(func)
     def fget(self):
